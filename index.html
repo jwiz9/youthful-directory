@@ -4,9 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Weather Dashboard</title>
 </head>
 <body>
-    
+    <section class="flex" id="parent-container">
+        <header class="flex" id="intro">
+            <h1>Weather Dashboard</h1>
+        </header>
+        <main class="flex" id="weather-container">
+            <div class="flex" id="city-search">
+                <!-- Search Form-->
+                <form class ="flex" id="search-field">
+                    <h2>Search for a City:</h2>
+                    <input type="text" placeholder="Search a City" id="search-input" />
+                    <button type="submit">Search</button>
+                </form>
+                 <!--Past Searched Cities-->
+                <div class="flex" id="past-searches"></div>
+            </div>
+            <div class="flex" id="weather-info">
+                <div id="todays-forecast">
+                     <!--Current day forecast-->
+                    <div class="flex" id="city-date"></div>
+                    <div class="flex" id="city-weather">
+                        <p id="temp">Temp: N/a</p>
+                        <p id="wind">Wind: N/a</p>
+                        <p id="humidity">Humidity: N/a</p>
+                        <p id="uv">UV Index: <span>N/a</span></p>
+                    </div>
+                </div>
+                <!-- 5 day forecast-->
+                <div class="flex" id="extended-forecast">
+                    <h2>Choose whether to show, weather!</h2>
+                </div>
+            </div>
+        </main>
+
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
