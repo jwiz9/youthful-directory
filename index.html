@@ -8,41 +8,38 @@
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <section class="flex" id="parent-container">
-        <header class="flex" id="intro">
-            <h1>Weather Dashboard</h1>
-        </header>
-        <main class="flex" id="weather-container">
-            <div class="flex" id="city-search">
-                <!-- Search Form-->
-                <form class ="flex" id="search-field">
-                    <h2>Search for a City:</h2>
-                    <input type="text" placeholder="Search a City" id="search-input" />
-                    <button type="submit">Search</button>
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
+  <main>
+        <section id="search-and-history-container">
+            <div id="search-container">
+                <form id="submit-form">
+                <label><h2>Search for a City:</h2></label>
+                <input type="text" placeholder="San Diego" autofocus id="search-text">
+                <input type="submit" value="Search" id="submit-btn">
                 </form>
-                 <!--Past Searched Cities-->
-                <div class="flex" id="past-searches"></div>
             </div>
-            <div class="flex" id="weather-info">
-                <div id="todays-forecast">
-                     <!--Current day forecast-->
-                    <div class="flex" id="city-date"></div>
-                    <div class="flex" id="city-weather">
-                        <p id="temp">Temp: N/a</p>
-                        <p id="wind">Wind: N/a</p>
-                        <p id="humidity">Humidity: N/a</p>
-                        <p id="uv">UV Index: <span>N/a</span></p>
-                    </div>
-                </div>
-                <!-- 5 day forecast-->
-                <div class="flex" id="extended-forecast">
-                    <h2>Choose whether to show, weather!</h2>
-                </div>
+            <div id="search-history">
             </div>
-        </main>
-
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./assets/js/script.js"></script>
+        </section>
+        <section id='display-container'>
+            <div id="current-city-container">
+                <div id="h2-container">
+                <h2 id="current-city">No city selected </h2>
+                </div>
+                <p id="temp">Temp: </p>
+                <p id="wind">Wind: </p>
+                <p id="humidity">Humidity: </p>
+            </div>
+            <div id="forecast">
+                <h3>5-Day Forecast:</h3>
+                <container id="five-day-container">
+                </container>
+            </div>
+        </section>
+  </main>
+  
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
