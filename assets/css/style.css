@@ -1,8 +1,9 @@
 :root {
-    --primary-color: #ff7b25;
-    --secondary-color: #feb236;
-    --link-hover: #d64161;
+--primary-color: #ff7b25;
+--secondary-color: #feb236;
+--link-hover: #d64161;
 }
+
 * {
 padding: 0;
 margin: 0;
@@ -52,6 +53,7 @@ border-bottom: 2px var(--primary-color);
 
 #submit-form h2 {
 letter-spacing: .4px;
+font-size: x-large;
 }
 
 #search-text {
